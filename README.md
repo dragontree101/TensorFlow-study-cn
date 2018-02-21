@@ -27,6 +27,12 @@
 - 初始矩阵的生成
 - 矩阵的变换
 - 多个矩阵的操作
-- 熟悉 [numpy-100] (http://www.labri.fr/perso/nrougier/teaching/numpy.100/)
+- 熟悉 [numpy-100](http://www.labri.fr/perso/nrougier/teaching/numpy.100/)
 
+### pyplot代码
+
+这个部门写了一些常用的绘图方法，主要用于数据展示的可视化
+- 直接通过数据绘制静态图
+- 通过静态图片连续组成一些变化的图片
+- 通过动画的形式绘制动态图
 
