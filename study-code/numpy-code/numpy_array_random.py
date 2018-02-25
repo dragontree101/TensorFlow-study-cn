@@ -20,3 +20,7 @@ print('random_array_3 is \n', random_array_3, '\nrandom_array_3 shape is ', rand
 # 生成一个(2,2)的随机矩阵，元素的值满足正态分布，其中loc为平均值, scale为平方差
 random_array_4 = np.random.normal(loc=0, scale=1, size=(2, 2))
 print('random_array_4 is \n', random_array_4, '\nrandom_array_4 shape is ', random_array_4.shape)
+
+# 生成一个(2, 3)的矩阵, 从标准正态分布中返回一个或多个样本值
+random_array_5 = np.random.randn(2, 3)
+print('random_array_5 is \n', random_array_5, '\nrandom_array_5 shape is ', random_array_5.shape)

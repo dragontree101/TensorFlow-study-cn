@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # python3
+# 完全使用tf的函数来完成线性回归算法
 
 import tensorflow as tf
 import numpy as np
@@ -14,13 +15,17 @@ noise = np.random.uniform(-0.15, 0.15, size=x_points.shape)
 y_points = np.power(x_points, 3) + noise
 print('y points shape is ', y_points.shape)
 
+# 原始离散点的构造
 # plt.figure(1, figsize=(8, 6))
 # plt.xlim(-2, 2)
 # plt.ylim(-2, 2)
 # plt.scatter(x_points, y_points)
 # plt.show()
 
+# tf_x 为 (100, 1)
 tf_x = tf.placeholder(tf.float32, x_points.shape)
+
+# tf_y 为 (100, 1)
 tf_y = tf.placeholder(tf.float32, y_points.shape)
 
 # l1 为 (100, 10)
@@ -46,7 +51,8 @@ with tf.Session() as sess:
     for step in range(200):
         _, l, l1_, pred = sess.run(
             [train_op, loss, l1, output], {tf_x: x_points, tf_y: y_points})
-        if step % 200 == 0:
+        # 每迭代10次展示变化过程
+        if step % 10 == 0:
             plt.cla()
             plt.scatter(x_points, y_points)
             plt.plot(x_points, pred, 'r-', lw=5)
